@@ -1,0 +1,33 @@
+group 'git.yampery'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+buildscript {
+    ext {
+        junitVersion = '4.12'
+        luceneCoreVersion = '7.3.0'
+    }
+}
+
+repositories {
+    maven {
+        url("http://maven.aliyun.com/nexus/content/groups/public/")
+    }
+    maven {
+        url("http://repository.sonatype.org/content/groups/public/")
+    }
+    maven {
+        url("https://repo1.maven.org/maven2/")
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile (
+        "org.apache.lucene:lucene-core:${luceneCoreVersion}"
+    )
+    testCompile("junit:junit:${junitVersion}")
+}
