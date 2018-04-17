@@ -69,6 +69,7 @@ public class GetStart {
             IndexWriter writer = new IndexWriter(dir, config);
             // 3. 索引文档
             indexDocs(writer, docDir);
+            writer.close();
             Date end = new Date();
             System.out.println(end.getTime() - start.getTime() + " total milliseconds");
         } catch (Exception e) {
