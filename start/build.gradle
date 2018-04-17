@@ -1,0 +1,2 @@
+group 'git.yampery'
+version "${rootProject.version}"

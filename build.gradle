@@ -12,22 +12,28 @@ buildscript {
     }
 }
 
-repositories {
-    maven {
-        url("http://maven.aliyun.com/nexus/content/groups/public/")
-    }
-    maven {
-        url("http://repository.sonatype.org/content/groups/public/")
-    }
-    maven {
-        url("https://repo1.maven.org/maven2/")
-    }
-    mavenCentral()
-}
+subprojects {
+    apply plugin: 'maven'
+    apply plugin: 'java'
+    apply plugin: 'idea'
 
-dependencies {
-    compile (
-        "org.apache.lucene:lucene-core:${luceneCoreVersion}"
-    )
-    testCompile("junit:junit:${junitVersion}")
+    repositories {
+        maven {
+            url("http://maven.aliyun.com/nexus/content/groups/public/")
+        }
+        maven {
+            url("http://repository.sonatype.org/content/groups/public/")
+        }
+        maven {
+            url("https://repo1.maven.org/maven2/")
+        }
+        mavenCentral()
+    }
+
+    dependencies {
+        compile(
+                "org.apache.lucene:lucene-core:${luceneCoreVersion}"
+        )
+        testCompile("junit:junit:${junitVersion}")
+    }
 }
