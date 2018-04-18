@@ -32,7 +32,8 @@ subprojects {
 
     dependencies {
         compile(
-                "org.apache.lucene:lucene-core:${luceneCoreVersion}"
+                "org.apache.lucene:lucene-core:${luceneCoreVersion}",
+                "org.apache.lucene:lucene-queryparser:${luceneCoreVersion}",
         )
         testCompile("junit:junit:${junitVersion}")
     }
