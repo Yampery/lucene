@@ -19,12 +19,12 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Date;
 
 /**
- * @decription: GetStart
- * <p></p>
+ * @decription: StartIndex
+ * <p>索引创建</p>
  * @date 18/4/17 23:40
  * @author yampery
  */
-public class GetStart {
+public class StartIndex {
 
     public static void main(String[] args) {
         boolean create = true;
@@ -51,7 +51,6 @@ public class GetStart {
             System.out.println("Indexing to directory '" + indexPath + "'...");
             Date start = new Date();
             // 1. 创建Directory
-            // 创建在内存中
             Directory dir = FSDirectory.open(Paths.get(indexPath));
 
             // 2. 创建IndexWriter，并指定分词器
