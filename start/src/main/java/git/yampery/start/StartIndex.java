@@ -20,7 +20,13 @@ import java.util.Date;
 
 /**
  * @decription: StartIndex
- * <p>索引创建</p>
+ * <p>索引创建
+ * 1. 创建Directory
+ * 2. 创建IndexWriter，并指定分词器
+ * 3. 创建一个Document
+ * 4. 根据需要添加字段、内容等，选择是否进行分词
+ * 5. 索引文档
+ * </p>
  * @date 18/4/17 23:40
  * @author yampery
  */
